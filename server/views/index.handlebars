@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Siimple - Free Bootstrap 3 Landing Page</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	 <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    <!-- siimple style -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">news.com Coding Exercise</a>
+        </div>
+      </div>
+    </div>
+
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h1>Check Your Weather</h1>
+					<h2 class="subtitle">Access all your weather info with a simple click</h2>
+					<form class="form-horizontal signup" role="form" id="fetchWeatherData">
+					  <div class="form-group">
+              <label class="control-label">Location</label>
+					    <input type="text" class="form-control" id="locationInput" placeholder="Enter your location to fetch data">
+            </div>
+            <div class="form-group">
+              <label class="control-label">Day of the Week</label>
+              <select class="selectpicker form-control" id="dayofweekSelect">
+                  <option value="Today">Today</option>
+                  <option value="Sunday">Sunday</option>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+              </select>
+					  </div>
+					  <button type="submit" class="btn btn-theme">Get it now</button>
+					</form>					
+				</div>
+        <div class="col-lg-8" id="weatherData">
+          <h2>Your weather for </h2>
+          <div class="table-responsive" id="weatherCurrentlyTable">
+            <table summary="This table is used to view the current weather data" class="table table-bordered table-hover">
+              <caption class="text-center">Showing For The Date: </caption>
+            </table>
+          </div><!--end of .table-responsive-->
+          <div class="table-responsive" id="weatherWeeklyTable">
+            <table summary="" class="table table-bordered table-hover">
+            </table>
+          </div><!--end of .table-responsive-->
+        </div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+					<p class="copyright">Copyright &copy; 2016 - Designed by <a href="https://www.linkedin.com/in/sambaranroy">Sambaran Roy</a></p>
+			</div>
+            <!-- 
+                All links in the footer should remain intact. 
+                Licenseing information is available at: http://bootstraptaste.com/license/
+                You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Siimple
+            -->
+		</div>		
+	</div>	
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
