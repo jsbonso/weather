@@ -90,8 +90,9 @@
     }
 
     function populateCurrentlyView(data) {
-    	$( "#weatherData h2" ).append( "<p>" + data.time + "</p>");
+    	$( "#weatherData h2" ).html("Your weather for " + data.time);
     	var table = $("#weatherCurrentlyTable table");
+        table.empty();
     	table.attr("summary", data.summary);
         drawHeader(currentlyFields, table);
         drawRow(data, table);
@@ -99,7 +100,8 @@
 
     function populateWeeklyView(daily) {
     	var table = $("#weatherWeeklyTable table");
-    	table.attr("summary", daily.summary);
+        table.empty();
+;    	table.attr("summary", daily.summary);
     	var data = daily.data;
     	var colArray = ['DayOfWeek'];
     	for (var i = 0; i < data.length; i++) {

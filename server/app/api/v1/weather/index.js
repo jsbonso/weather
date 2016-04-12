@@ -74,7 +74,7 @@ router.use('/:location', function (req, res, next) {
 router.use('/:location/:weekday', function (req, res) {
     LocationService.GeocodingManager.getGeocodesForLocation(req.params.location)
     .then((location) => {
-        var dateValue = (req.params.weekday) ? calculateDate(req.params.weekday.toLowerCase()) : null;
+        var dateValue = (req.params.weekday && req.params.weekday.toLowerCase() !== 'today') ? calculateDate(req.params.weekday.toLowerCase()) : null;
         WeatherService.WeatherManager.getWeatherForLocationAndTime(location.lat, location.lng, dateValue)
             .then((weather) => {
                 res.status(200).json(formatWeatherTime(weather));
